@@ -10,3 +10,13 @@ export const addOne = () => {
 export const applyNumber = (number) => {
     return({type:APPLY_NUMBER, payload:number});
 }
+
+export const changeOperation = (opp) => {
+    return({type: CHANGE_OPERATION, payload: opp})
+}
+
+export default {
+    addOne,
+    applyNumber,
+    changeOperation
+}
