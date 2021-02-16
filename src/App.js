@@ -25,6 +25,18 @@ function App() {
     dispatch(actions.clearDisplay())
   }
 
+  const memoryValueClick = () => {
+    dispatch(actions.memorySetValue())
+  }
+
+  const memmorySwap = () => {
+    dispatch(actions.memorySwap())
+  }
+
+  const memmoryClear = () => {
+    dispatch(actions.memoryClear())
+  }
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -42,9 +54,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"M+"} onClick={memoryValueClick}/>
+              <CalcButton value={"MR"} onClick={() => memmorySwap()}/>
+              <CalcButton value={"MC"} onClick={memmoryClear}/>
             </div>
 
             <div className="row">

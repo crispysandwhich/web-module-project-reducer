@@ -5,6 +5,11 @@ export const CHANGE_OPERATION = "CHANGE_OPERATION";
 
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY"
 
+export const MEMORY_VALUE_SET = "MEMORY_VALUE_SET" 
+export const MEMOM_SWAP = "MEMOM_SWAP"
+export const MEM_CLEAR = "MEM_CLEAR"
+
+
 export const addOne = () => {
     return({type:ADD_ONE});
 }
@@ -21,8 +26,24 @@ export const clearDisplay = () => {
     return({type: CLEAR_DISPLAY})
 }
 
+export const memorySetValue = () => {
+    return({type: MEMORY_VALUE_SET})
+}
+
+export const memorySwap = () => {
+    return({type: MEMOM_SWAP})
+}
+
+export const memoryClear = () => {
+    return({type: MEM_CLEAR})
+}
+
 export default {
     addOne,
     applyNumber,
-    changeOperation
+    changeOperation,
+    clearDisplay,
+    memorySetValue,
+    memorySwap,
+    memoryClear
 }
